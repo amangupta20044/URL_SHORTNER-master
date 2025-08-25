@@ -18,9 +18,12 @@ app.get('/', (req, res) => {
   res.send('Hello, World!');
 });
 
+const allowedOrigin = "https://url-shortner-master-u4ok.vercel.app";
+
 app.use(cors({
-    origin: "https://url-shortner-master-u4ok.vercel.app/", // your React app
-    credentials: true // 👈 this allows cookies to be sent
+  origin: allowedOrigin,
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
 }));
 
 
