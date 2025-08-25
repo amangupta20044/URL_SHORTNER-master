@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const axiosInstance = axios.create({
-    baseURL:"http://localhost:3000",
+    baseURL:"https://url-shortner-master-5u13.vercel.app/",
     timeout:10000, //10s
     withCredentials:true
 })
